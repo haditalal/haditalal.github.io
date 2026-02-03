@@ -230,7 +230,16 @@ img{ max-width: 100%; display:block; }
   display:grid;
   grid-template-columns: 1.4fr .8fr;
   gap: 18px;
+   align-items: start; 
 }
+.hero-right{
+  align-items: flex-end; /* الصورة أقصى اليمين */
+}
+
+.avatar-wrap{
+  margin-top: 6px;       /* محاذاة مع العنوان */
+}
+
 
 .kicker{
   color: var(--muted);
@@ -261,7 +270,7 @@ img{ max-width: 100%; display:block; }
 
 .quick {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 20px;
 }
@@ -328,8 +337,8 @@ img{ max-width: 100%; display:block; }
 }
 
 /* Mobile */
-@media (max-width: 700px) {
-  .grid {
+@media (max-width: 900px){
+  .quick{
     grid-template-columns: 1fr;
   }
 }
