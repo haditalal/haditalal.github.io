@@ -280,16 +280,22 @@ img{ max-width: 100%; display:block; }
   gap: 12px;
 }
 .avatar-wrap{
-  border-radius: 22px;
+  width: 170px;              /* حجم الصورة */
+  height: 210px;
+  margin: 0 auto;            /* توسيط */
+  border-radius: 50%;
   border: 1px solid var(--line);
   background: var(--panel);
-  overflow:hidden;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.18);
 }
+
 .avatar{
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
 }
+
 
 .mini-card{
   border: 1px solid var(--line);
