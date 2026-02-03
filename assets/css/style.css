@@ -272,6 +272,11 @@ img{ max-width: 100%; display:block; }
   padding: 14px 16px;
 }
 .quick-label{ font-size: 12px; color: var(--muted); }
+.quick-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 .quick-value{ font-weight: 600; }
 
 .hero-right{
