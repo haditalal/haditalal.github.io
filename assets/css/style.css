@@ -259,17 +259,17 @@ img{ max-width: 100%; display:block; }
 
 .hero-cta{ display:flex; gap: 10px; margin: 0 0 16px; flex-wrap:wrap; }
 
-.quick{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 10px;
-  margin-top: 10px;
+.quick {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
 }
-.quick-item{
-  border: 1px solid var(--line);
+.quick-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
-  padding: 10px 12px;
-  background: var(--panel);
+  padding: 14px 16px;
 }
 .quick-label{ font-size: 12px; color: var(--muted); }
 .quick-value{ font-weight: 600; }
@@ -308,18 +308,22 @@ img{ max-width: 100%; display:block; }
 .mini-list li{ margin: 6px 0; }
 
 /* ========== Grid Cards ========== */
-.grid{
-  margin-top: 14px;
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 14px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
 }
-.card{
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--panel);
-  padding: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.14);
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card h2{ margin: 0 0 8px; font-size: 18px; }
 .card p{ margin: 0 0 10px; color: var(--muted); }
@@ -327,11 +331,12 @@ img{ max-width: 100%; display:block; }
   color: var(--text);
   display:inline-flex;
   gap: 8px;
-  align-items:center;
   padding: 9px 10px;
   border-radius: 12px;
   border: 1px solid var(--line);
   background: transparent;
+  margin-top: auto;
+  align-self: flex-start;
 }
 .link:hover{ background: var(--panel2); }
 
