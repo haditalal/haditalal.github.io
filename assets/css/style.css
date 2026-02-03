@@ -287,13 +287,14 @@ img{ max-width: 100%; display:block; }
 .hero-right{
   display: flex;
   flex-direction: column;
-  align-items: flex-end;   /* الصورة أعلى يمين */
+  align-items: flex-end;   /* يمين */
+  justify-content: flex-start; /* أعلى */
   gap: 12px;
 }
 .avatar-wrap{
   width: 170px;
   height: 210px;
-  margin: 6px 0 0 0;   /* بدون auto */
+  margin: 6px 0 0 0;   
   border-radius: 50%;
   border: 1px solid var(--line);
   background: var(--panel);
