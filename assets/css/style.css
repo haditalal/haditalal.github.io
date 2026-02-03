@@ -468,3 +468,49 @@ grid-template-rows: auto auto;
   color: var(--muted);
   font-size: 14px;
 }
+
+
+/* === Icon Buttons (inherit your .btn) === */
+.icon-btn {
+  position: relative;
+  padding-inline: 12px 14px;
+}
+
+/* Harmonize icon/text */
+.icon-btn .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+/* Brand tints on hover while keeping your gradient border */
+.btn-orcid:hover {
+  box-shadow: 0 10px 25px rgba(166, 206, 57, .22);
+}
+.btn-github:hover {
+  box-shadow: 0 10px 25px rgba(255, 255, 255, .10);
+}
+.btn-linkedin:hover {
+  box-shadow: 0 10px 25px rgba(10, 102, 194, .22);
+}
+
+/* Optional: finer brand feel by slightly tinting the background */
+.btn-orcid {
+  background: linear-gradient(135deg, rgba(166,206,57,.18), rgba(110,231,255,.12));
+}
+.btn-github {
+  background: linear-gradient(135deg, rgba(255,255,255,.10), rgba(167,139,250,.12));
+}
+.btn-linkedin {
+  background: linear-gradient(135deg, rgba(10,102,194,.18), rgba(167,139,250,.10));
+}
+
+/* Mobile full-width (optional): uncomment to make buttons full width on small screens) */
+/*
+@media (max-width: 600px){
+  .hero-cta { width: 100%; }
+  .hero-cta .btn { flex: 1 1 100%; justify-content: center; }
+}
+*/
