@@ -385,3 +385,32 @@ img{ max-width: 100%; display:block; }
   }
   .submenu.open{ display:block; }
 }
+
+
+.edu-item{
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.edu-header{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.edu-date{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.edu-inst{
+  color: var(--accent);
+  margin: 4px 0;
+}
+
+.edu-desc{
+  color: var(--muted);
+  font-size: 14px;
+}
+
