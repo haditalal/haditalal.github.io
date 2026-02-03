@@ -3,50 +3,186 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Research — Your Name</title>
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <title>Your Name — Academic Profile</title>
+  <meta name="description" content="Academic website — research, publications, projects, and professional service." />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
+  <!-- Topbar -->
   <header class="topbar">
-    <a class="brand" href="../index.html"><span class="brand-mark"></span><span class="brand-text">Your Name</span></a>
+    <a class="brand" href="index.html" aria-label="Home">
+      <span class="brand-mark"></span>
+      <span class="brand-text">Your Name</span>
+    </a>
+
     <nav class="nav" aria-label="Primary">
-      <a class="nav-link" href="../index.html">Home</a>
-      <a class="nav-link is-active" href="research.html">Research</a>
-      <a class="nav-link" href="projects.html">Projects</a>
-      <a class="nav-link" href="publications.html">Publications</a>
-      <a class="nav-link" href="service.html">Service</a>
-      <a class="nav-link" href="contact.html">Contact</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+
+      <div class="nav-panel" id="navPanel">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="index.html">Home</a></li>
+
+          <!-- CV (dropdown) -->
+          <li class="nav-item has-submenu">
+            <button class="nav-link nav-btn" data-submenu="cvMenu" aria-expanded="false">
+              CV
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <ul class="submenu" id="cvMenu">
+              <li><a class="submenu-link" href="pages/education.html">Education</a></li>
+              <li><a class="submenu-link" href="pages/experience.html">Employment</a></li>
+              <li><a class="submenu-link" href="pages/skills.html">Skills</a></li>
+              <li><a class="submenu-link" href="pages/skills.html#languages">Languages</a></li>
+              <li><a class="submenu-link" href="pages/skills.html#courses">Courses & Certificates</a></li>
+              <li><a class="submenu-link" href="pages/skills.html#achievements">Achievements</a></li>
+              <li><a class="submenu-link" href="pages/skills.html#hobbies">Hobbies</a></li>
+            </ul>
+          </li>
+
+          <!-- Research (dropdown) -->
+          <li class="nav-item has-submenu">
+            <button class="nav-link nav-btn" data-submenu="researchMenu" aria-expanded="false">
+              Research
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <ul class="submenu" id="researchMenu">
+              <li><a class="submenu-link" href="pages/research.html">Graduate Research</a></li>
+              <li><a class="submenu-link" href="pages/projects.html">Projects</a></li>
+            </ul>
+          </li>
+
+          <!-- Outputs (dropdown) -->
+          <li class="nav-item has-submenu">
+            <button class="nav-link nav-btn" data-submenu="outputsMenu" aria-expanded="false">
+              Outputs
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <ul class="submenu" id="outputsMenu">
+              <li><a class="submenu-link" href="pages/publications.html">Publications</a></li>
+              <li><a class="submenu-link" href="pages/publications.html#conferences">Conferences</a></li>
+            </ul>
+          </li>
+
+          <!-- Service (dropdown) -->
+          <li class="nav-item has-submenu">
+            <button class="nav-link nav-btn" data-submenu="serviceMenu" aria-expanded="false">
+              Service
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <ul class="submenu" id="serviceMenu">
+              <li><a class="submenu-link" href="pages/service.html">Academic Service</a></li>
+              <li><a class="submenu-link" href="pages/service.html#peer-review">Peer Review</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link" href="pages/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="btn ghost" id="themeToggle" type="button" aria-label="Toggle dark mode">
+            <span class="icon" aria-hidden="true">☾</span>
+            <span class="btn-text">Theme</span>
+          </button>
+        </div>
+      </div>
     </nav>
   </header>
 
+  <!-- Hero -->
   <main class="container">
-    <section class="card">
-      <h1 class="title" style="margin:0 0 10px;">Graduate Research</h1>
-      <p class="subtitle" style="margin:0;">
-        Replace this with a structured summary: problem → method → contributions → evaluation.
-      </p>
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-left">
+          <p class="kicker">PhD Student · Machine Learning · Data Streams</p>
+          <h1 class="title">Your Name</h1>
+          <p class="subtitle">
+            A short, research-focused bio goes here (2–3 lines). Mention your main topics and what you build.
+          </p>
+
+          <div class="hero-tags">
+            <span class="pill">Online Learning</span>
+            <span class="pill">Semi-Supervised Learning</span>
+            <span class="pill">Class Imbalance</span>
+            <span class="pill">Concept Drift</span>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn" href="pages/research.html">View Research</a>
+            <a class="btn ghost" href="pages/publications.html">Publications</a>
+          </div>
+
+          <div class="quick">
+            <div class="quick-item">
+              <div class="quick-label">Affiliation</div>
+              <div class="quick-value">University / Lab</div>
+            </div>
+            <div class="quick-item">
+              <div class="quick-label">Location</div>
+              <div class="quick-value">Birmingham, UK</div>
+            </div>
+            <div class="quick-item">
+              <div class="quick-label">Email</div>
+              <div class="quick-value"><a href="mailto:you@domain.com">you@domain.com</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="avatar-wrap">
+            <!-- Replace the image file: assets/img/profile.jpg -->
+            <img class="avatar" src="assets/img/profile.jpg" alt="Profile photo of Your Name" />
+          </div>
+
+          <div class="mini-card">
+            <h2 class="mini-title">Highlights</h2>
+            <ul class="mini-list">
+              <li>Reviewer for: Conference/Journal names</li>
+              <li>Key project: OSNN / OSLMF / etc.</li>
+              <li>Selected achievement: Award / scholarship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Home sections -->
     <section class="grid">
       <article class="card">
-        <h2>Research Interests</h2>
-        <p>Online learning, semi-supervised learning, class imbalance, concept drift, streaming evaluation.</p>
+        <h2>Graduate Research</h2>
+        <p>
+          One paragraph summary of your PhD direction, the problem, and the impact.
+        </p>
+        <a class="link" href="pages/research.html">Explore research →</a>
       </article>
+
       <article class="card">
-        <h2>Current Focus</h2>
-        <p>Explain your current objective in 3–5 bullets (you will paste from your CV later).</p>
+        <h2>Projects</h2>
+        <p>
+          Short list of 2–3 projects (stream learning, evaluation pipelines, etc.).
+        </p>
+        <a class="link" href="pages/projects.html">See projects →</a>
       </article>
+
       <article class="card">
-        <h2>Tools</h2>
-        <p>MATLAB, Python, MOA, SPSS/ANOVA, HPC (SLURM), etc.</p>
+        <h2>Publications</h2>
+        <p>
+          Add your latest/selected publications here (title + venue + year).
+        </p>
+        <a class="link" href="pages/publications.html">View publications →</a>
       </article>
     </section>
 
     <footer class="footer">
       <span>© <span id="year"></span> Your Name</span>
+      <span class="dot">•</span>
+      <span>Built with HTML/CSS/JS on GitHub Pages</span>
     </footer>
   </main>
 
-  <script src="../assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
